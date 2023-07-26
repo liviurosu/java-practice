@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -70,7 +70,7 @@ public class Main {
                 System.out.println(iter.next());
           }
 
-          System.out.println("/n Finding Spot.");
+          System.out.println(" Finding Spot.");
           for(Animal a : animalList){
                 if(a.getName().equals("Spot")){
                       System.out.println("found Spot in the array list" + a);
@@ -78,9 +78,12 @@ public class Main {
           }
 
           for(String a : animalMap.keySet()){
-
-                System.out.println("key: " + key + " value: " + animalMap.get(key));
+                if(animalMap.get(a).equals("Spot")) {
+                      System.out.println("found spot in hash map " + animalMap.get("Spot"));
+                }
           }
+
+
 
 
 
