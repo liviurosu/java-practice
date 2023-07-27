@@ -6,14 +6,14 @@ public class Account implements Comparable<Account>{
 
     private String cardTypes[];
     private String sortCode;
-    private String accountNumbers;
+    private String accountNumber;
     private String password;
 
-    public Account(String[] cardTypes, String sortCode, String accountNumbers, String password) {
+    public Account(String[] cardTypes, String sortCode, String accountNumber, String password) {
         super();
         this.cardTypes = cardTypes;
         this.sortCode = sortCode;
-        this.accountNumbers = accountNumbers;
+        this.accountNumber = accountNumber;
         this.password = password;
     }
 
@@ -33,12 +33,12 @@ public class Account implements Comparable<Account>{
         this.sortCode = sortCode;
     }
 
-    public String getAccountNumbers() {
-        return accountNumbers;
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
-    public void setAccountNumbers(String accountNumbers) {
-        this.accountNumbers = accountNumbers;
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
     public String getPassword() {
@@ -54,7 +54,7 @@ public class Account implements Comparable<Account>{
         return "Account has : " +
                 "cardTypes: " + Arrays.toString(cardTypes) +
                 ", sortCode: " + sortCode + '\'' +
-                ", accountNumbers: " + accountNumbers + '\'' +
+                ", accountNumbers: " + accountNumber + '\'' +
                 ", password: " + password + '\'';
     }
 
@@ -62,7 +62,7 @@ public class Account implements Comparable<Account>{
     public int compareTo(Account thatAct){
         if (Arrays.asList(this.cardTypes).contains(thatAct.cardTypes[0]))
             if (this.sortCode.equals(thatAct.sortCode))
-                if(this.accountNumbers.equals(thatAct.accountNumbers))
+                if(this.accountNumber.equals(thatAct.accountNumber))
                     if(this.password.equals(thatAct.password))
                     {
                         return 0; // it will log in
